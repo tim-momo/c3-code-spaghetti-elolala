@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+ 
 <head>
     <!-- Questionnaire à l'adresse suivante: https://forms.office.com/r/j3FyHzC6pk -->
     <meta charset="UTF-8">
@@ -7,15 +8,18 @@
     <title>Carte Produit</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap" rel="stylesheet">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&display=swap%22
+        rel="stylesheet">
     <style>
-        body{
+        body {
             display: flex;
             gap: 20px;
             align-items: flex-start;
             font-family: "Poppins", sans-serif;
         }
-        .c {
+ 
+        .carte-produit {              /* Carte du produit */
             width: 300px;
             border: 1px solid #b6b6be;
             padding: 20px;
@@ -23,31 +27,36 @@
             background: white;
             border-radius: 8px;
         }
-        .c img {
+ 
+        .carte-produit__image {              /* Image du produit */
             width: 100%;
             height: 200px;
             object-fit: cover;
             border-radius: 4px;
         }
-        .c h2 {
+ 
+        .carte-produit__titre {       /* Titre du produit */
             font-size: 24px;
             color: #2c3e50;
             margin: 15px 0 10px 0;
             font-weight: 600;
         }
-        .c p {
+ 
+        .carte-produit__description {    /* Description du produit */
             font-size: 14px;
             color: #7f8c8d;
             margin: 0 0 15px 0;
             line-height: 1.6;
         }
-        .c .p {
+ 
+        .carte-produit__prix {        /* Prix du produit */
             font-size: 20px;
             color: #27ae60;
             font-weight: bold;
             margin: 0 0 15px 0;
         }
-        .c button {
+ 
+        .carte-produit__button {        /* Bouton "ajouter au panier" */
             background: #3498db;
             color: white;
             border: none;
@@ -57,10 +66,12 @@
             font-size: 14px;
             width: 100%;
         }
-        .c button:hover {
-            background: #2980b9;
-        }
-        .badge {
+ 
+     
+ 
+ 
+        .carte-produit__badge {         /*  Badge sur la carte du produit */
+           
             display: inline-block;
             background: #e74c3c;
             color: white;
@@ -68,10 +79,12 @@
             border-radius: 3px;
             font-size: 10px;
             position: absolute;
-            top: 10px;
+            top: 10px;                        
             right: 10px;
         }
-        .c2 {
+ 
+ 
+        .carte-produit--compact {                          
             width: 300px;
             border: 1px solid #b6b6be;
             padding: 20px;
@@ -81,111 +94,42 @@
             display: flex;
             gap: 15px;
         }
-        .c2 img {
-            width: 100px;
-            height: 100px;
-            object-fit: cover;
-            border-radius: 4px;
-        }
-        .c2 h3 {
-            font-size: 14px;
-            color: #2c3e50;
-            margin: 0 0 8px 0;
-        }
-        .c2 p {
-            font-size: 10px;
-            color: #7f8c8d;
-            margin: 0 0 17px 0;
-        }
-        .c2 button {
-            background: #3498db;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            cursor: pointer;
-            border-radius: 4px;
-            font-size: 10px;
-            width: 100%;
-        }
-        .c2 button:hover {
-            background: #2980b9;
-        }
-
-        .c3 {
-            width: 300px;
-            border: 3px solid #e74c3c;
-            padding: 20px;
-            margin: 20px;
-            background: white;
-            border-radius: 8px;
-            position: relative;
-        }
-        .c3 img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-radius: 4px;
-        }
-        .c3 h2 {
-            font-size: 24px;
-            color: #2c3e50;
-            margin: 15px 0 10px 0;
-            font-weight: 600;
-        }
-        .c3 p {
-            font-size: 14px;
-            color: #7f8c8d;
-            margin: 0 0 15px 0;
-            line-height: 1.6;
-        }
-        .p2 {
-            font-size: 20px;
-            color: #27ae60;
-            font-weight: bold;
-            margin: 0 0 15px 0;
-        }
-        .c3 button {
-            background: #3498db;
-            color: white;
-            border: none;
-            padding: 12px 24px;
-            cursor: pointer;
-            border-radius: 4px;
-            font-size: 14px;
-            width: 100%;
-        }
-        .c3 button:hover {
-            background: #2980b9;
-        }
+ 
+ 
     </style>
 </head>
+ 
 <body>
-    <div class="c">
-   
-        <img src="https://static.photos/technology/320x240/37" alt="Produit">
-        <h2>Nom du Produit 1</h2>
-        <p>Description courte du produit qui donne envie d'acheter.</p>
-        <div class="p">1149,99 $</div>
-        <button>Ajouter au panier</button>
+    <div class="carte-produit">      <!-- Carte produit 1-->
+ 
+        <img class="carte-produit__image" src="https://static.photos/technology/320x240/37" alt="Produit">
+        <h2 class="carte-produit__titre">Nom du Produit 1</h2>
+        <p class="carte-produit__description">Description courte du produit qui donne envie d'acheter.</p>
+        <div class="carte-produit__prix">1149,99 $</div>
+        <button class="carte-produit__button">Ajouter au panier</button>   <!-- Bleu-->
     </div>
-
-
-    <div class="c2">
-        <img src="https://static.photos/technology/100x100/130" alt="Mini produit">
+ 
+ 
+ 
+ 
+    <div class="carte-produit">     <!-- Carte produit 2-->
+        <img class="carte-produit__image" src="https://static.photos/technology/100x100/130" alt="Mini produit">
         <div>
-            <h3>Nom du produit mini 2</h3>
-            <p>Description rapide</p>
-            <button>Ajouter au panier</button>
+            <h2 class="carte-produit__titre">Nom du produit mini 2</h2>
+            <p class="carte-produit__description">Description rapide</p>
+            <button class="carte-produit__button">Ajouter au panier</button>
         </div>
     </div>
-
-    <div class="c3">
-        <span class="badge">NOUVEAU</span>
-        <img src="https://static.photos/gaming/320x240/30" alt="Produit">
-        <h2>Nom du Produit 3</h2>
-        <p>Description courte du produit qui donne envie d'acheter.</p>
-        <div class="p2">1120,99 $</div>
-        <button>Ajouter au panier</button>
+ 
+    <div class="carte-produit">    <!-- Carte produit 3-->
+ 
+        <span class="carte-produit__badge">NOUVEAU</span> <!-- Rouge-->
+        <img class="carte-produit__image" src="https://static.photos/gaming/320x240/30" alt="Produit">
+        <h2 class="carte-produit__titre">Nom du Produit 3</h2>
+        <p class="carte-produit__description">Description courte du produit qui donne envie d'acheter.</p>
+        <div class="carte-produit__prix">1120,99 $</div>
+        <button class="carte-produit__button">Ajouter au panier</button>      
     </div>
 </body>
+ 
 </html>
